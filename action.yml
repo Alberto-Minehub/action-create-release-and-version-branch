@@ -1,0 +1,12 @@
+name: "Create release and version branch"
+description: "Creates release and version branch"
+author: "MollemaR"
+inputs:
+  github_token:
+    description: "GITHUB_TOKEN. Optional if you use checkout@v2 action."
+    default: "${{ github.token }}"
+  version_master:
+    description: "VERSION_MASTER. The version of master."
+runs:
+  using: "docker"
+  image: "Dockerfile"
