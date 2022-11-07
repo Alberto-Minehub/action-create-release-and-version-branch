@@ -7,6 +7,10 @@ Creates a release and version branch when a specific commit message is provided
 ### `github_token`
 **Optional**
 
+### `COMMIT_MESSAGE`
+
+**Required**. Commit message that is required to know which version to increment.
+
 ## Example usage
 ```yml
 name: Creates new release and version branch
@@ -15,5 +19,9 @@ on:
     branch: "master"
 
 jobs:
-  WIP
+  create-release-and-branch:
+  - uses: MollemaR/action-create-release-and-version-branch@master
+    id: create-release-and-version-branch
+    with:
+      COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
 ```

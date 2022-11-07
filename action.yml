@@ -5,8 +5,8 @@ inputs:
   github_token:
     description: "GITHUB_TOKEN. Optional if you use checkout@v2 action."
     default: "${{ github.token }}"
-  version_master:
-    description: "VERSION_MASTER. The version of master."
+  COMMIT_MESSAGE:
+    description: "COMMIT_MESSAGE. The commit message to know which version to increment."
 runs:
   using: "docker"
   image: "Dockerfile"
