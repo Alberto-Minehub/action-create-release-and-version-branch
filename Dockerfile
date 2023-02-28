@@ -1,6 +1,4 @@
-FROM alpine:3.16.2
-
-RUN apk add --no-cache bash=5.1.16-r2 git=2.36.5-r0
+FROM public.ecr.aws/n2m5y1h2/alpine:3.16.2
 
 COPY entrypoint.sh /entrypoint.sh
 
